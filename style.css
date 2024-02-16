@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  :root {
+    --bg-login: url('./assets/login-bg.jpg');
+    --bg-color: #1E1E1E;
+    --text-color:#FFFFFF;
+    --label-color:#e2e2e2;
+    --bg-input:#121212;
+    --text-input: #c1c1c1;
+    --color-purple:#7c488a;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    line-height: 1.5;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+  }
+  
+  .imagem-login {
+    background-image: var(--bg-login);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 2.5rem;
+  }
+  
+  .imagem-login p {
+    color: var(--text-color);
+    text-align: center;
+    font-size: .9rem;
+  }
+  .imagem-login span {
+    color:#ff005c;
+    font-size: .9rem;
+  }
+  .login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 3.25rem 4.75rem;
+  }
+  .login img {
+    height: 250px;
+    margin-bottom: 1.5rem;
+    animation: pulse 2s infinite;
+    animation-timing-function: ease-in-out;
+  }
+  @keyframes pulse {
+    0% {
+      filter: brightness(100%);
+    }
+    100% {
+      filter: brightness(150%);
+    }
+  }
+  .formulario-grupo, .formulario-grupo input {
+    width: 100%;
+  }
+  .formulario-grupo label {
+    text-align: left;
+    display: block;
+    font-size: .9rem;
+    color: var(--label-color);
+    margin-bottom: .5rem;
+  }
+  .formulario-grupo input {
+    padding: 0.75rem;
+    background: var(--bg-input);
+    height: initial;
+    font-size: .9rem;
+    color: var(--text-input);
+    font-weight: 400;
+    line-height: 1.5;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    outline: none;
+  }
+  .formulario-grupo input:focus {
+    outline: 0.063rem solid var(--color-purple);
+  }
+  .checkbox-div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  .checkbox-div input[type=checkbox] {
+    margin-right: 1.25rem; 
+  } 
+  .checkbox-div input[type=checkbox]:before {
+    cursor: pointer;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: .25rem;
+    background-color: var(--bg-input);
+    border: 1px solid #363739;
+  }
+  .checkbox-div input[type=checkbox]:checked:before {
+    content: '\2714';
+    font-size: .875rem;
+    color:var(--color-purple);
+    text-align: center;
+  }
+  .checkbox-div label {
+    margin-top: .5rem;
+    cursor: pointer;
+    font-size: .9rem;
+    color: var(--text-input);
+  }
+  
+  button {
+    border-radius: 30px;
+    width: 25%;
+    border: none;
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+    height: 50px;
+    align-items: center;
+    font-size: 1rem;
+    background-color: var(--color-purple);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: .25s;
+  }
+  button:hover {
+    background-color: var(--text-input);
+    color: var(--color-purple);
+  }
+  
+  .whats-app {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    transition: .5s;
+    margin-right: 1.625rem;
+    margin-bottom: 1.625rem;
+    cursor: pointer;
+  }
+  .whats-app:hover {
+    transform: scale(1.1);
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--text-input);
+    font-size: .9rem;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
